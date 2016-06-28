@@ -1,0 +1,11 @@
+{
+	"manifest":
+	[
+		{ "tag":"cube", "type":"model", "filepath":"data\\models\\cube.obj" },
+		{ "tag":"sphere", "type":"model", "filepath":"data\\models\\sphere.obj" },
+		{ "tag":"torus", "type":"model", "filepath":"data\\models\\torus.obj" },
+		{ "tag":"basic", "type":"material", "filepath":"data\\materials\\basic.material" },
+		{ "tag":"blue", "type":"material", "filepath":"data\\materials\\blue.material" },
+		{ "tag":"defaultTex", "type":"texture", "filepath":"data\\textures\\default.png" }
+	]
+}

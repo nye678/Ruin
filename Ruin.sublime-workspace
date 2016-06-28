@@ -1,0 +1,1426 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tileHei",
+				"tileHeight"
+			],
+			[
+				"first",
+				"first_attribute"
+			],
+			[
+				"g",
+				"g_input"
+			],
+			[
+				"COL",
+				"COLUMN2"
+			],
+			[
+				"CO",
+				"COLUMN2"
+			],
+			[
+				"COLU",
+				"COLUMN3"
+			],
+			[
+				"tex",
+				"texture_count"
+			],
+			[
+				"DEB",
+				"DEBUG_FRAG_CODE"
+			],
+			[
+				"DEBU",
+				"DEBUG_VERTEX_CODE"
+			],
+			[
+				"texture",
+				"textureSize"
+			],
+			[
+				"TE",
+				"TEXTURE_SIZE_LOC"
+			],
+			[
+				"Sort",
+				"SortCommandList"
+			],
+			[
+				"pivot",
+				"pivotLoc"
+			],
+			[
+				"posit",
+				"positionBuffer"
+			],
+			[
+				"glBind",
+				"glBindVertexArray"
+			],
+			[
+				"GL_TEXTURE",
+				"GL_TEXTURE_2D"
+			],
+			[
+				"gl3",
+				"gl3wInit"
+			],
+			[
+				"RenderMa",
+				"RenderMaterial"
+			],
+			[
+				"RenderMater",
+				"RenderMaterialList"
+			],
+			[
+				"Translucen",
+				"TranslucencyType"
+			],
+			[
+				"Full",
+				"FullscreenLayers"
+			],
+			[
+				"uint",
+				"uint8_t"
+			],
+			[
+				"uin",
+				"uint64_t"
+			],
+			[
+				"FullSc",
+				"FullScreenLayerShift"
+			],
+			[
+				"Render",
+				"Renderer"
+			],
+			[
+				"RenderCo",
+				"RenderCommand"
+			],
+			[
+				"cmd_l",
+				"cmd_list_size"
+			],
+			[
+				"RenderComm",
+				"RenderCommandList"
+			],
+			[
+				"pivo",
+				"pivotloc"
+			],
+			[
+				"Dest",
+				"DestroyRuinWindow"
+			],
+			[
+				"HI",
+				"HINSTANCE"
+			],
+			[
+				"Release",
+				"ReleaseGlobalMemory"
+			],
+			[
+				"Releas",
+				"ReleaseBlock"
+			],
+			[
+				"Alloc",
+				"AllocateBlock"
+			],
+			[
+				"Allo",
+				"Allocator_FreeList"
+			],
+			[
+				"add",
+				"add_subdirectory"
+			],
+			[
+				"addRe",
+				"addReference"
+			],
+			[
+				"get",
+				"getAllocator"
+			],
+			[
+				"rMem",
+				"rMemoryPool"
+			],
+			[
+				"rM",
+				"rMemoryPool"
+			],
+			[
+				"_all",
+				"_allocator"
+			],
+			[
+				"rMemo",
+				"rMemoryPool"
+			],
+			[
+				"rMemory",
+				"rMemoryPool"
+			],
+			[
+				"_allo",
+				"_allocatorPools"
+			],
+			[
+				"rMemor",
+				"rMemoryPool"
+			],
+			[
+				"rMe",
+				"rMemoryManager"
+			],
+			[
+				"rEngineO",
+				"rEngineObjectFactory"
+			],
+			[
+				"rEngine",
+				"rEngineObjectFactory"
+			],
+			[
+				"block",
+				"blockSize"
+			],
+			[
+				"tcs",
+				"tcsShader"
+			],
+			[
+				"Mem",
+				"MemberEnd"
+			],
+			[
+				"display",
+				"displaySettings"
+			],
+			[
+				"displa",
+				"displaySettings"
+			],
+			[
+				"disl",
+				"displaySettings"
+			],
+			[
+				"Pro",
+				"PROJECT_SOURCE_DIR"
+			],
+			[
+				"PRO",
+				"PROJECT_SOURCE_DIR"
+			],
+			[
+				"jr",
+				"jrMurmurHash"
+			],
+			[
+				"clone",
+				"clone"
+			],
+			[
+				"alloc",
+				"allocator"
+			],
+			[
+				"In",
+				"INVALID_VECTOR_BOUNDS"
+			],
+			[
+				"jrSetNo",
+				"jrSetNodeBlack"
+			],
+			[
+				"jrDe",
+				"jrDefaultCompare"
+			],
+			[
+				"jrD",
+				"jrDestroy"
+			],
+			[
+				"half",
+				"halfHeight"
+			],
+			[
+				"cont",
+				"controller"
+			],
+			[
+				"bottom",
+				"bottomBoundaryNormal"
+			],
+			[
+				"start",
+				"startSelected"
+			],
+			[
+				"Draw",
+				"DrawRectangle"
+			],
+			[
+				"DrawBitMap",
+				"DrawBitMapTile"
+			],
+			[
+				"gamelib",
+				"gamelibFileHandle"
+			],
+			[
+				"Debug",
+				"OutputDebugStringA"
+			],
+			[
+				"Initia",
+				"InitializeGameFunc"
+			],
+			[
+				"Initial",
+				"InitializeGame"
+			],
+			[
+				"paddleS",
+				"paddleSfx"
+			],
+			[
+				"window",
+				"windowWidth"
+			],
+			[
+				"Trigger",
+				"TriggerGameUpdate"
+			],
+			[
+				"sound",
+				"soundplayer"
+			],
+			[
+				"GameUp",
+				"GameUpdateLock"
+			],
+			[
+				"pad",
+				"paddleSfx"
+			],
+			[
+				"score",
+				"scoreSfx"
+			],
+			[
+				"Wave",
+				"WaveDataChunk"
+			],
+			[
+				"image",
+				"imageHeader"
+			],
+			[
+				"imag",
+				"imageWidth"
+			],
+			[
+				"BITM",
+				"BitMapFileHeader"
+			],
+			[
+				"tStor",
+				"tStorageStart"
+			],
+			[
+				"pS",
+				"pStorageStart"
+			],
+			[
+				"pStor",
+				"pStorageAddress"
+			],
+			[
+				"Bounda",
+				"BoundaryTagAllocator"
+			],
+			[
+				"tempor",
+				"temporary"
+			],
+			[
+				"_hea",
+				"_headerChain"
+			],
+			[
+				"alig",
+				"alignedPtr"
+			],
+			[
+				"u",
+				"uintptr_t"
+			],
+			[
+				"Bound",
+				"BoundaryTagAllocator"
+			],
+			[
+				"mem",
+				"memBlock"
+			],
+			[
+				"freed",
+				"freedBlock"
+			],
+			[
+				"Free",
+				"FreeList"
+			],
+			[
+				"nextBl",
+				"nextBlockLength"
+			],
+			[
+				"next",
+				"nextBlockTag"
+			],
+			[
+				"all",
+				"_allocated"
+			],
+			[
+				"pre",
+				"prevBlockTag"
+			],
+			[
+				"prevB",
+				"prevBlockLength"
+			],
+			[
+				"SetBoun",
+				"SetBoundaryTagsFree"
+			],
+			[
+				"Set",
+				"SetBlockFree"
+			],
+			[
+				"prevBloc",
+				"prevBlockTag"
+			],
+			[
+				"Creat",
+				"CreateBoundaryTagsFree"
+			],
+			[
+				"SetBound",
+				"SetBoundaryTagsFree"
+			],
+			[
+				"bound",
+				"BoundaryTag"
+			],
+			[
+				"SetBoundaryT",
+				"SetBoundaryTagsAlloc"
+			],
+			[
+				"SetBl",
+				"SetBlockAllocated"
+			],
+			[
+				"bloc",
+				"blockLength"
+			],
+			[
+				"SetBlo",
+				"SetBlockAllocated"
+			],
+			[
+				"con",
+				"controllerState"
+			],
+			[
+				"pu",
+				"puckPos"
+			],
+			[
+				"puck",
+				"puckPos"
+			],
+			[
+				"windo",
+				"windowHeight"
+			],
+			[
+				"norma",
+				"normalizedLX"
+			],
+			[
+				"XInputSetStat",
+				"XInputSetStateStub"
+			],
+			[
+				"glBuffer",
+				"glBufferSubData"
+			],
+			[
+				"transform",
+				"transformBuffer"
+			],
+			[
+				"tran",
+				"transforms"
+			],
+			[
+				"square",
+				"squareIndicies"
+			],
+			[
+				"indi",
+				"indices"
+			],
+			[
+				"transf",
+				"transformBuffer"
+			],
+			[
+				"squ",
+				"squareVerts"
+			],
+			[
+				"tile",
+				"tileHeight"
+			],
+			[
+				"tileWid",
+				"tileWidthDelta"
+			],
+			[
+				"col",
+				"column"
+			],
+			[
+				"graphics",
+				"love.graphics.draw()"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "code/platform/win32/win32_ruin_main.cpp",
+			"settings":
+			{
+				"buffer_size": 6358,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "code/game/ruin_game_main.h",
+			"settings":
+			{
+				"buffer_size": 412,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "build.bat",
+			"settings":
+			{
+				"buffer_size": 1838,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "code/game/ruin_level.h",
+			"settings":
+			{
+				"buffer_size": 247,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Makefile/Make.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Makefile/Make.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 81.0,
+		"last_filter": "ifnedef",
+		"selected_items":
+		[
+			[
+				"ifnedef",
+				"Snippet: #ifndef … #define … #endif"
+			],
+			[
+				"ifndef",
+				"Snippet: #ifndef … #define … #endif"
+			],
+			[
+				"ifn",
+				"Snippet: #ifndef … #define … #endif"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"#ifndef",
+				"Snippet: #ifndef … #define … #endif"
+			],
+			[
+				"ifne",
+				"Snippet: #ifndef … #define … #endif"
+			],
+			[
+				"cmake",
+				"CMake - List Find Module"
+			],
+			[
+				"list mo",
+				"CMake - List Find Module"
+			],
+			[
+				"find",
+				"CMake - List Find Module"
+			],
+			[
+				"clisp",
+				"SublimeREPL: Clisp"
+			],
+			[
+				"tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"linter",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"bloc",
+				"Toggle Block Comment"
+			],
+			[
+				"block",
+				"Toggle Block Comment"
+			],
+			[
+				"com",
+				"Toggle Block Comment"
+			],
+			[
+				"comment",
+				"Toggle Block Comment"
+			],
+			[
+				"new v",
+				"File: New View into File"
+			],
+			[
+				"install 	",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"upper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"open",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"l",
+				"Snippet: luafuncheader"
+			],
+			[
+				"android",
+				"Android: New Android Project"
+			],
+			[
+				"",
+				"ADB: Run App"
+			],
+			[
+				"run",
+				"ADB: Run App"
+			],
+			[
+				"bui",
+				"Build: Build"
+			],
+			[
+				"adb",
+				"ADB: List Devices"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"ant",
+				"Build: Ant Debug"
+			],
+			[
+				"Ant",
+				"Build: Ant Clean"
+			],
+			[
+				"Build",
+				"Build: Ant Clean"
+			]
+		],
+		"width": 520.0
+	},
+	"console":
+	{
+		"height": 278.0,
+		"history":
+		[
+			"24 / 512",
+			"5.0 * 24.0 / 512.0",
+			"floor(5.0 / 8.0)",
+			"floor(4.0 / 8.0)",
+			"floor(3.0 / 8.0)",
+			"from math import *",
+			"math.floor(0.375)",
+			"floor(3.0 / 8.0)",
+			"import math",
+			"floor(3.0 / 8.0)",
+			"3.0 / 8.0",
+			"3 % 8",
+			"import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"dir",
+			"ls",
+			"clear()",
+			"clear",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read()) ",
+			"view.run_command('adb')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": true,
+		"show_open_files": true,
+		"show_tabs": false,
+		"side_bar_visible": true,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Projects/Ruin",
+		"/D/Projects/Ruin/code/common",
+		"/D/Projects/Ruin/code/common/collections",
+		"/D/Projects/Ruin/code/common/math",
+		"/D/Projects/Ruin/code/common/memory",
+		"/D/Projects/Ruin/code/engine",
+		"/D/Projects/Ruin/code/engine/graphics",
+		"/D/Projects/Ruin/code/game",
+		"/D/Projects/Ruin/code/platform",
+		"/D/Projects/Ruin/code/platform/win32"
+	],
+	"file_history":
+	[
+		"/D/Projects/rust/hello_world/main.rs",
+		"/D/Projects/rust/hello_world/Cargo.toml",
+		"/D/Projects/rust/hello_world/Cargo.lock",
+		"/D/Projects/Ruin/code/game/ruin_tileset.cpp",
+		"/D/Projects/Ruin/code/common/collections/ruin_vector.cpp",
+		"/D/Projects/Ruin/code/common/memory/ruin_memory.cpp",
+		"/D/Projects/Ruin/code/platform/win32/win32_ruin_file.cpp",
+		"/D/Documents/dc_controller_wire_colors.txt",
+		"/D/Projects/Ruin/code/platform/win32/win32_ruin_input.cpp",
+		"/D/Projects/Ruin/code/platform/ruin_file.h",
+		"/D/Projects/Ruin/code/platform/ruin_input.h",
+		"/D/Projects/Ruin/code/game/ruin_levelmap.cpp",
+		"/D/Projects/Ruin2D/data/Maps/testmap.tmx",
+		"/D/Projects/Ruin/code/common/memory/ruin_allocator.h",
+		"/D/Projects/Ruin/code/common/ruin_string.h",
+		"/D/Projects/Ruin2D/data/TileSets/LameSet.tsx",
+		"/D/MAME/docs/config.txt",
+		"/D/Projects/Ruin/code/platform/win32/win32_ruin_main.cpp",
+		"/C/data/cmdline.cfg",
+		"/F/Backup/Code/School/CMPS109/asg3/code/numbers.cpp",
+		"/F/Backup/Code/School/CMPS101/CMPS101/pa4/Graph.c",
+		"/F/Backup/Code/School/CMPS101/CMPS101/pa4/Graph.h",
+		"/F/Backup/Code/School/CMPS101/CMPS101/pa4/FindPath.c",
+		"/F/Backup/Code/Old Stuff/CollisionTest2/CollisionTest2/CollisionTest2/Game1.cs",
+		"/D/Projects/Ruin/build.bat",
+		"/D/Projects/Ruin/code/common/math/ruin_vec.h",
+		"/D/Projects/Ruin/code/engine/graphics/ruin_render.cpp",
+		"/D/Projects/Ruin/code/engine/graphics/ruin_render.h",
+		"/D/Projects/Ruin/lib/rapidxml-1.13/rapidxml/rapidxml.hpp",
+		"/D/Projects/Ruin/code/engine/graphics/ruin_texture.h",
+		"/D/Projects/Ruin/code/game/ruin_tileset.h",
+		"/D/Projects/Ruin/code/game/ruin_levelmap.h",
+		"/D/Projects/Ruin/code/engine/graphics/ruin_texture.cpp",
+		"/D/Projects/Ruin/code/engine/graphics/ruin_camera.cpp",
+		"/D/Projects/Ruin/code/engine/graphics/ruin_camera.h",
+		"/D/Projects/Ruin/code/common/memory/ruin_memory.h",
+		"/D/Projects/Ruin/code/engine/graphics/ruin_gl.h",
+		"/D/Projects/Ruin/code/common/collections/ruin_vector.h",
+		"/D/Projects/Ruin/data/shaders/basic.vert",
+		"/D/Projects/Ruin/code/common/math/ruin_matrix.h",
+		"/D/Projects/Ruin/code/common/math/ruin_matrix.cpp",
+		"/D/Projects/Ruin/code/engine/graphics/ruin_gl.cpp",
+		"/D/Projects/Ruin/code/common/math/ruin_math_basic.h",
+		"/D/Projects/Ruin/code/common/math/ruin_math.h",
+		"/D/Projects/Ruin/code/common/ruin_assert.h",
+		"/D/Projects/Ruin/code/common/collections/ruin_list.cpp",
+		"/D/Projects/Ruin/code/common/collections/ruin_list.h",
+		"/D/Projects/Ruin/code/common/ruin_int.h",
+		"/D/Projects/Ruin/ruin.cpp",
+		"/D/Projects/Ruin/code/ruin_memory.h",
+		"/D/Projects/Ruin/code/ruin_main.cpp",
+		"/D/Projects/Ruin/Ruin.sublime-project",
+		"/D/Projects/Ruin/code/ruin_memory.cpp",
+		"/D/Projects/Ruin/code/ruin_render.h",
+		"/D/Projects/Ruin/lib/gl3w/include/GL/gl3w.h",
+		"/D/Projects/Ruin/code/ruin_render.cpp",
+		"/D/Projects/Ruin/code/ruin_math.h",
+		"/D/Projects/Ruin/code/platform/ruin_window.h",
+		"/D/Projects/Ruin/code/ruin_collections.h",
+		"/D/Projects/Ruin/code/CMakeLists.txt",
+		"/D/Projects/Ruin/memory.cpp",
+		"/D/Projects/Ruin/CMakeLists.txt",
+		"/C/Program Files (x86)/CMake/share/cmake-3.0/Modules/FindZLIB.cmake",
+		"/D/lib/zlib/zlib-config-version.cmake",
+		"/D/lib/zlib/zlib-config.cmake",
+		"/D/Projects/libraries/zlib/ChangeLog",
+		"/D/Projects/Ruin/collections.h",
+		"/D/Projects/Ruin/memory.h",
+		"/D/Projects/Ruin/code/rRuin.cpp",
+		"/D/lib/zlib/include/zconf.h",
+		"/D/Projects/libraries/zlib/CMakeLists.txt",
+		"/D/Projects/Ruin/lib/glm/glm/CMakeLists.txt",
+		"/D/Projects/Ruin/lib/glm/CTestConfig.cmake",
+		"/D/Projects/Ruin/lib/glm/cmake/GNUInstallDirs.cmake",
+		"/D/Projects/Ruin/lib/glm/CMakeLists.txt",
+		"/D/Projects/Ruin/code/rMath/rMatrix.h",
+		"/D/Projects/Ruin/code/rMath/rMath.h",
+		"/D/Projects/Ruin/code/rMath/rVec.h",
+		"/D/Projects/Ruin/utility.h",
+		"/D/Projects/Ruin/data/shaders/superbible/sb-3.1.vert",
+		"/D/Projects/Ruin/data/shaders/superbible/sb-2.4.frag",
+		"/D/Projects/Ruin/data/shaders/superbible/sb-2.8.vert",
+		"/D/Projects/Ruin/data/shaders/superbible/sb-3.8.tes",
+		"/D/Projects/Ruin/data/shaders/superbible/sb-3.7.tcs",
+		"/D/Projects/Ruin/data/settings.json",
+		"/D/Projects/Ruin/data/shaders/superbible/sb-2.3.vert",
+		"/D/Projects/Ruin/data/shaders/superbible/sb-3.4.frag",
+		"/D/Projects/Ruin/data/shaders/superbible/sb-3.3.vert",
+		"/D/Projects/Ruin/data/shaders/superbible/sb-3.6.frag",
+		"/D/Projects/Ruin/data/shaders/superbible/sb-3.5.vert",
+		"/D/Projects/Ruin/src_backup/Utility.cpp",
+		"/D/Projects/Ruin/utility.cpp",
+		"/D/Projects/Ruin/lib/rapidjson/include/rapidjson/internal/ieee754.h",
+		"/D/Projects/Ruin/gen/ruin_config.g",
+		"/D/Projects/Ruin/lib/MathFunctions/CMakeLists.txt",
+		"/D/Projects/Ruin/code/ruin_config.h.in",
+		"/D/Projects/Ruin/lib/MathFunctions/mysqrt.cpp",
+		"/D/Projects/Ruin/lib/MathFunctions/mysqrt.h",
+		"/D/Projects/Ruin/code/ruin.cpp",
+		"/D/Projects/Ruin/lib/gl3w/CMakeLists.txt",
+		"/D/Cache/Roaming/Sublime Text 3/Packages/User/nmake.sublime-build",
+		"/D/Projects/Ruin/lib/GLGenerator/lib/curl-7.44.0/CMakeLists.txt",
+		"/D/Projects/Ruin/ruin_config.h",
+		"/D/Projects/Ruin/ruin_config.h.in",
+		"/D/Projects/Ruin2D/code/TextureManager.cpp",
+		"/D/Projects/Ruin2D/data/Shaders/DefaultTileShader.vert",
+		"/D/Projects/Ruin2D/data/Shaders/DefaultTileShader.frag",
+		"/D/Projects/Ruin2D/data/Shaders/TestTriangleShader.vert",
+		"/D/Projects/Ruin2D/code/Graphics.cpp",
+		"/D/Projects/Ruin2D/inc/Graphics.h",
+		"/D/Projects/Ruin2D/build.bat",
+		"/D/Projects/Ruin2D/code/TileMap.cpp",
+		"/D/Projects/Ruin2D/lib/gl3w/include/GL/gl3w.h",
+		"/D/Projects/Ruin2D/data/Shaders/DefaultTextShader.frag",
+		"/D/Projects/Ruin2D/data/Shaders/TestTriangleShader.frag",
+		"/D/Projects/libraries/lpng1617/README",
+		"/D/Projects/libraries/lpng1617/projects/vstudio/zlib.props",
+		"/D/Projects/Ruin2D/code/TileSet.cpp",
+		"/D/Projects/Ruin2D/code/WindowManager.cpp",
+		"/D/Projects/Ruin2D/inc/TileSet.h",
+		"/D/Projects/Ruin2D/inc/InputManager.h",
+		"/D/Projects/Ruin2D/inc/Font.h",
+		"/D/Projects/Ruin2D/code/Camera.cpp",
+		"/D/Projects/Ruin2D/code/Sprite.cpp",
+		"/D/Projects/Ruin2D/code/LocalMapData.cpp",
+		"/D/Projects/Ruin2D/code/LocalMapState.cpp",
+		"/D/Projects/Ruin2D/code/Font.cpp",
+		"/D/Projects/Ruin2D/inc/TileMap.h"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"*.cpp",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"CreateStackAllocator",
+			"float2",
+			"Draw",
+			"UpdateKeyState",
+			"JR",
+			"jr",
+			"JR",
+			"jr",
+			"JR",
+			"jr",
+			"JR",
+			"400",
+			"other",
+			"this",
+			"CreateRenderer",
+			"_texture.Height",
+			"_tileHeight",
+			"_texture.Width",
+			"cmd->texture",
+			"SortFunc",
+			"Vector*",
+			"core_api",
+			"jr",
+			"JRFile",
+			"jr",
+			"JRFile",
+			"MATH",
+			"list",
+			"List",
+			"renderer",
+			"-",
+			"float3",
+			"float2",
+			"queue",
+			"INITIAL_QUEUE_SIZE",
+			"->",
+			"LinearAllocator",
+			"size_t",
+			"id",
+			"size_t",
+			"blockptr",
+			"headEndTag",
+			"headTag",
+			"freeList",
+			"nextBlock",
+			"_numBlocks",
+			"_freeList",
+			"prevBlock",
+			"nextBlockLength",
+			"prevBlockLength",
+			"nextBlockTag",
+			"prevBlockTag",
+			"blockLength",
+			"tagPtr",
+			"freedBlock",
+			"adjustedSize",
+			"tagPtr",
+			"blockLength",
+			"_freeList",
+			"freeBlock",
+			"blockSize",
+			"endTag",
+			"startTag",
+			"newBlock",
+			"blockLength",
+			"_freeList",
+			"rBlockOverheadSize",
+			"rNextBlockTag",
+			"rBlockEndTag",
+			"rPrevBlockTag",
+			"rBlockTag",
+			"rSetBlockAllocated",
+			"rSetBlockFree",
+			"rBlockFree",
+			"rBlockLength",
+			"jrSetBlockFree",
+			"jrSetBlockAllocated",
+			"jrBlockEndTag",
+			"jrBlockTag",
+			"SetBoundaryTagsFree",
+			"SetBoundaryTagsAlloc",
+			"CreateBoundaryTagsFree",
+			"JRBoundaryTag",
+			"JRFreeList",
+			"mergeBlock",
+			"class",
+			"version",
+			"DefaultTextShader",
+			"InitializeBuffers",
+			"JRInt2",
+			"JRMat3",
+			"JRFloat2",
+			"JRFloat4",
+			"JRRect",
+			"JRFloat2",
+			"JRInt2",
+			"JRMat3",
+			"JRMat4",
+			"JRFloat2",
+			"Jr",
+			"JRFloat2",
+			"JR",
+			"JRMat4",
+			"JRFloat2",
+			"JR",
+			"JRFloat2",
+			"JRMat3",
+			"JRMat4",
+			"JRFloat2",
+			"assert",
+			"vec4",
+			"vec2",
+			"JRVector",
+			"B",
+			"jrMemCopy",
+			"		\n",
+			"uint32",
+			"paddle3",
+			"paddle2",
+			"prevA",
+			"paddle1",
+			"_t",
+			"GameUpdate",
+			"InitalizeGame",
+			"768",
+			"1024",
+			"game.",
+			"windowWidth"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"free_block",
+			"BLOCK_OVERHEAD_SIZE",
+			"NEXT_BLOCK_TAG",
+			"BLOCK_END_TAG",
+			"PREV_BLOCK_TAG",
+			"BLOCK_TAG",
+			"SET_BLOCK_ALLOCATED",
+			"SET_BLOCK_FREE",
+			"BLOCK_FREE",
+			"BLOCK_LENGTH",
+			"rSetBlockFree",
+			"rSetBlockAllocated",
+			"rBlockEndTag",
+			"rBlockTag",
+			"setBoundaryTagsFree",
+			"setBoundaryTagsAlloc",
+			"createBoundaryTagsFree",
+			"BoundaryTag",
+			"FreeList",
+			"struct",
+			"glm::ivec2",
+			"glm::mat3",
+			"glm::vec2",
+			"glm::vec4",
+			"glm::ivec4",
+			"glm::vec2",
+			"glm::ivec2",
+			"glm::mat3",
+			"glm::mat4",
+			"glm::vec2",
+			"glm::mat4",
+			"glm::vec2",
+			"glm::mat3",
+			"glm::mat4",
+			"glm::vec2",
+			"JRFloat4",
+			"JRFloat2",
+			"JRTVector",
+			"uint32_t",
+			"paddle4",
+			"paddle3",
+			"paddle2",
+			"windowHeight",
+			"windowWidth",
+			"width",
+			"height",
+			"vec4",
+			"hglrc",
+			"pixelFormat",
+			"hdc",
+			"instance",
+			" ="
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "code/platform/win32/win32_ruin_main.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2186,
+								2186
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 810.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "code/game/ruin_game_main.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 412,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								412,
+								412
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "build.bat",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1838,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								871,
+								871
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Batch File/Batch File.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "code/game/ruin_level.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 247,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								149,
+								149
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 200.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Ruin",
+	"project": "Ruin.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ruin_render",
+				"code\\engine\\graphics\\ruin_render.cpp"
+			],
+			[
+				"windowmanager",
+				"code\\WindowManager.cpp"
+			],
+			[
+				"tile",
+				"code\\TileSet.cpp"
+			],
+			[
+				"tilemap",
+				"code\\TileMap.cpp"
+			],
+			[
+				"spr",
+				"code\\Sprite.cpp"
+			],
+			[
+				"localma",
+				"code\\LocalMapData.cpp"
+			],
+			[
+				"gra",
+				"code\\Graphics.cpp"
+			],
+			[
+				"camera",
+				"code\\Camera.cpp"
+			],
+			[
+				"font.cpp",
+				"code\\Font.cpp"
+			],
+			[
+				"camera.cpp",
+				"code\\Camera.cpp"
+			],
+			[
+				"tilemap.h",
+				"inc\\TileMap.h"
+			],
+			[
+				"font",
+				"inc\\Font.h"
+			],
+			[
+				"im",
+				"inc\\InputManager.h"
+			],
+			[
+				"grap",
+				"inc\\Graphics.h"
+			],
+			[
+				"ts.h",
+				"inc\\TileSet.h"
+			],
+			[
+				"jr_ve",
+				"lib\\jrcore\\code\\jr_vector.cpp"
+			],
+			[
+				"mem",
+				"code\\jr_memmanager.cpp"
+			],
+			[
+				"memmanager",
+				"code\\jr_memmanager.h"
+			],
+			[
+				"jrmem.cpp",
+				"code\\jr_mem.cpp"
+			],
+			[
+				"pointer",
+				"code\\jr_pointerutils.h"
+			],
+			[
+				"jr_mem",
+				"code\\jr_mem.h"
+			],
+			[
+				"project",
+				"proj\\puck.sublime-project"
+			],
+			[
+				"jr_lisp",
+				"code\\jr_lisp.h"
+			],
+			[
+				"jr_lisp.cpp",
+				"code\\jr_lisp.cpp"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\Projects\\jrmem\\proj\\jrmem.sublime-project"
+			],
+			[
+				"r",
+				"D:\\Projects\\jrrender\\proj\\jrrender.sublime-project"
+			],
+			[
+				"math",
+				"D:\\Projects\\jrmath\\proj\\jrmath.sublime-project"
+			],
+			[
+				"jrmath",
+				"D:\\Projects\\jrmath\\proj\\jrmath.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 281.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
