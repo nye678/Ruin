@@ -26,9 +26,7 @@
 *.exe
 *.out
 *.app
-
 *.pdb
-*.suo
 
 # =========================
 # Operating System Files
@@ -76,3 +74,12 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# =========================
+# Visual Studio Files
+# =========================
+*.suo
+*.opensdf
+*.vcxproj.filters
+*.vcxproj.*.nvuser
+*.vcxproj.user

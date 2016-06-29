@@ -7,100 +7,12 @@
 #include "ruin_texture.h"
 #include "ruin_vector.h"
 #include "ruin_matrix.h"
+#include "ruin_file.h"
+#include "ruin_render_types.h"
 
 using namespace Ruin;
 
 #define INITIAL_LIST_SIZE 200005
-
-const char* DEBUG_VERTEX_CODE = R"VERTEX(
-#version 440 core
-layout(location = 0) in vec3 position;
-layout(location = 1) in float index;
-layout(location = 2) uniform ivec2 textureSize;
-layout(location = 3) uniform ivec2 tileDim;
-layout(location = 4) uniform ivec2 tileSize;
-layout(location = 6) uniform mat4 camera;
-layout(location = 8) uniform mat3 uvMatrixTest;
-
-out vec2 uv;
-
-void main()
-{
-    const vec4 vertices[4] = vec4[4](
-        vec4(0.0, 0.0, 0.0, 1.0),
-        vec4(1.0, 0.0, 0.0, 1.0),
-        vec4(1.0, 1.0, 0.0, 1.0),
-        vec4(0.0, 1.0, 0.0, 1.0));
-
-    mat4 T = mat4(
-        tileSize.x, 0, 0, 0,
-        0, tileSize.y, 0, 0,
-        0, 0, 1.0, 0,
-        position.x, position.y, position.z, 1.0);
-
-    gl_Position = camera * T * vertices[gl_VertexID];
-
-    const vec3 uv_verts[4] = vec3[4](vec3(0.0, 0.0, 1.0),
-                                     vec3(1.0, 0.0, 1.0),
-                                     vec3(1.0, 1.0, 1.0),
-                                     vec3(0.0, 1.0, 1.0));
-
-    int x = int(index) % tileDim.x;
-    int y = int(floor(float(index) / float(tileDim.x)));
-
-    mat3 uvMatrix = mat3(1.0);
-    uvMatrix[2].x = float(x) * float(tileSize.x) / float(textureSize.x);
-    uvMatrix[2].y = float(y) * float(tileSize.y) / float(textureSize.y);
-    uvMatrix[0].x = float(tileSize.x) / float(textureSize.x);
-    uvMatrix[1].y = float(tileSize.y) / float(textureSize.y);
-
-    uv = (uvMatrix * uv_verts[gl_VertexID]).xy;
-    //uv = (uvMatrixTest * uv_verts[gl_VertexID]).xy;
-}
-)VERTEX";
-
-const char* DEBUG_FRAG_CODE = R"FRAGMENT(
-#version 440 core
-
-in vec2 uv;
-out vec4 end_color;
-
-layout(location = 7) uniform sampler2D spriteTex;
-
-void main()
-{
-    vec4 texColor = texture(spriteTex, uv);
-    //end_color = vec4(texColor.r, texColor.g, texColor.b texColor.a);
-
-    // BMPs are backwards for some reason.
-    end_color = vec4(texColor.a, texColor.b, texColor.g, texColor.r);
-}
-)FRAGMENT";
-
-//typedef uint64_t RenderKey;
-
-union RenderKey
-{
-    uint64_t key;
-    struct
-    {
-        uint64_t materialId: 30;
-        uint64_t depth: 24;
-        uint64_t translucencyType: 2;
-        uint64_t viewportLayer: 3;
-        uint64_t viewport: 3;
-        uint64_t fullscreenLayer: 2;
-    };
-};
-
-struct RenderCommand
-{
-    RenderKey key;
-    Texture* texture;
-    float2 position;
-    float depth;
-    uint32_t index;
-};
 
 struct RenderCommandList
 {
@@ -110,27 +22,6 @@ struct RenderCommandList
 int32_t CompareRenderCommand(const RenderCommand &cmd1, const RenderCommand &cmd2)
 {
    return (int32_t)((int64_t)cmd1.key.key - (int64_t)cmd2.key.key);
-
-    /*if (cmd1->depth < cmd2->depth)
-        return -1;
-    else if (cmd2->depth > cmd2->depth)
-        return 1;
-    else // Equal Depth
-    {
-        if (cmd1->texture->unit < cmd2->texture->unit)
-            return -1;
-        else if (cmd1->texture->unit > cmd2->texture->unit)
-            return 1;
-        else // Same Texture
-        {
-            if (cmd1->position.y < cmd2->position.y)
-                return -1;
-            else if (cmd1->position.y > cmd2->position.y)
-                return 1;
-            else
-                return 0;
-        }
-    }*/
 }
 
 inline bool operator< (const RenderCommand &lhs, const RenderCommand &rhs)
@@ -187,10 +78,16 @@ Renderer* CreateRenderer()
     glVertexAttribPointer(1, 1, GL_FLOAT, GL_FALSE, sizeof(GLfloat), 0);
     glVertexAttribDivisor(1, 1);
 
-    r->shader = CompileBasicShader(DEBUG_VERTEX_CODE, DEBUG_FRAG_CODE);
+    char *spriteShaderVertCode = nullptr, *spriteShaderFragCode = nullptr;
+    LoadTextFile("D:\\Projects\\Ruin\\data\\shaders\\sprite_shader.vert", spriteShaderVertCode);
+    LoadTextFile("D:\\Projects\\Ruin\\data\\shaders\\sprite_shader.frag", spriteShaderFragCode);
 
-    BitMap* bmp = LoadBMP("D:\\Projects\\Ruin\\data\\textures\\rpg_sprite_walk.bmp");
-    DEBUG_TEXTURE = CreateTexture(bmp, Int2(8, 4), Int2(24, 32));
+    r->shader = CompileBasicShader(spriteShaderVertCode, spriteShaderFragCode);
+    Release(spriteShaderVertCode);
+    Release(spriteShaderFragCode);
+
+    BitMap* bmp = LoadBMP("D:\\Projects\\Ruin\\data\\textures\\default.bmp");
+    DEBUG_TEXTURE = CreateTexture(bmp, Int2(1, 1), Int2(128, 128));
 
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);

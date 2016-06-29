@@ -41,8 +41,6 @@ void testCreateStuff()
 {
     BitMap* bmp = LoadBMP("D:\\Projects\\Ruin\\data\\textures\\rpg_sprite_walk.bmp");
     Texture* tex = CreateTexture(bmp, Int2(8, 4), Int2(24, 32));
-    BitMap* defbmp = LoadBMP("D:\\Projects\\Ruin\\data\\textures\\default.bmp");
-    Texture* defTex = CreateTexture(defbmp, Int2(1, 1), Int2(128, 128));
     BitMap* bgBmp = LoadBMP("D:\\Projects\\Ruin\\data\\textures\\lameset.bmp");
     Texture* bgTex = CreateTexture(bgBmp, Int2(32, 32), Int2(16, 16));
 
