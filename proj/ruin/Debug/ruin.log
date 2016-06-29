@@ -1,8 +1,0 @@
-﻿Build started 6/29/2016 6:19:38 AM.
-     1>Project "D:\Projects\Ruin\proj\ruin\ruin.vcxproj" on node 2 (Build target(s)).
-     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.MakeFile.Targets(37,5): warning MSB8005: The property 'NMakeBuildCommandLine' doesn't exist.  Skipping...
-     1>Done Building Project "D:\Projects\Ruin\proj\ruin\ruin.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:00.10
