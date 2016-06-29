@@ -28,6 +28,9 @@
 *.app
 *.pdb
 
+# Build folder
+build
+
 # =========================
 # Operating System Files
 # =========================
@@ -79,7 +82,12 @@ $RECYCLE.BIN/
 # Visual Studio Files
 # =========================
 *.suo
+*.sdf
 *.opensdf
 *.vcxproj.filters
 *.vcxproj.*.nvuser
 *.vcxproj.user
+
+proj/build
+proj/ruin/Debug
+proj/ruin/Release
