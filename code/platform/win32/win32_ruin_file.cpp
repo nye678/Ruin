@@ -89,7 +89,7 @@ size_t LoadTextFile(const char* fileName, char* &buffer)
         return 0;
     }
 
-    memset(buffer, 0x0, (size_t)fileSize);
+    memset(buffer, 0x0, (size_t)fileSize + 1);
 
     size_t bytesRead = ReadFile(textFile, buffer, fileSize);
 

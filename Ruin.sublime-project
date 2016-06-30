@@ -9,8 +9,8 @@
 	[
 		{
 			"name": "Ruin",
-			"shell_cmd": "call ..\\build.bat",
-			"working_dir": "${project_path}\\build",
+			"shell_cmd": "call build.bat",
+			"working_dir": "${project_path}",
 		},
 	]
 }

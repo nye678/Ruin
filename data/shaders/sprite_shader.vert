@@ -1,11 +1,12 @@
 #version 330 core
+#extension GL_ARB_explicit_uniform_location : require
+
 layout(location = 0) in vec3 position;
 layout(location = 1) in float index;
 layout(location = 2) uniform ivec2 textureSize;
 layout(location = 3) uniform ivec2 tileDim;
 layout(location = 4) uniform ivec2 tileSize;
 layout(location = 6) uniform mat4 camera;
-layout(location = 8) uniform mat3 uvMatrixTest;
 
 out vec2 uv;
 
@@ -40,5 +41,4 @@ void main()
     uvMatrix[1].y = float(tileSize.y) / float(textureSize.y);
 
     uv = (uvMatrix * uv_verts[gl_VertexID]).xy;
-    //uv = (uvMatrixTest * uv_verts[gl_VertexID]).xy;
 }

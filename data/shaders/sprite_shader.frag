@@ -1,4 +1,5 @@
 #version 330 core
+#extension GL_ARB_explicit_uniform_location : require
 
 in vec2 uv;
 out vec4 end_color;
