@@ -87,7 +87,12 @@ $RECYCLE.BIN/
 *.vcxproj.filters
 *.vcxproj.*.nvuser
 *.vcxproj.user
+*.VC.db
+*.VC.VC.opendb
 
 proj/build
 proj/ruin/Debug
 proj/ruin/Release
+proj/vstudio/Release
+proj/vstudio/Debug
+proj/vstudio/x64

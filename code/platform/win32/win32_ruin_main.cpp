@@ -39,9 +39,9 @@ double time()
 
 void testCreateStuff()
 {
-    BitMap* bmp = LoadBMP("D:\\Projects\\Ruin\\data\\textures\\rpg_sprite_walk.bmp");
+    BitMap* bmp = LoadBMP("..\\data\\textures\\rpg_sprite_walk.bmp");
     Texture* tex = CreateTexture(bmp, Int2(8, 4), Int2(24, 32));
-    BitMap* bgBmp = LoadBMP("D:\\Projects\\Ruin\\data\\textures\\lameset.bmp");
+    BitMap* bgBmp = LoadBMP("..\\data\\textures\\lameset.bmp");
     Texture* bgTex = CreateTexture(bgBmp, Int2(32, 32), Int2(16, 16));
 
     int k = 0;

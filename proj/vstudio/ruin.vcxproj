@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{298AC309-111B-4ABD-9FF4-C07B42DB9B4C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\code;$(ProjectDir)..\..\code\common;$(ProjectDir)..\..\code\common\collections;$(ProjectDir)..\..\code\common\math;$(ProjectDir)..\..\code\common\memory;$(ProjectDir)..\..\code\engine;$(ProjectDir)..\..\code\engine\entities;$(ProjectDir)..\..\code\engine\graphics;$(ProjectDir)..\..\code\game;$(ProjectDir)..\..\code\platform;$(ProjectDir)..\..\code\platform\win32;$(ProjectDir)..\..\lib\gl3w\include;$(ProjectDir)..\..\lib\rapidxml-1.13;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>opengl32.lib;user32.lib;gdi32.lib;Xinput.lib;Shlwapi.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\code;$(ProjectDir)..\..\code\common;$(ProjectDir)..\..\code\common\collections;$(ProjectDir)..\..\code\common\math;$(ProjectDir)..\..\code\common\memory;$(ProjectDir)..\..\code\engine;$(ProjectDir)..\..\code\engine\entities;$(ProjectDir)..\..\code\engine\graphics;$(ProjectDir)..\..\code\game;$(ProjectDir)..\..\code\platform;$(ProjectDir)..\..\code\platform\win32;$(ProjectDir)..\..\lib\gl3w\include;$(ProjectDir)..\..\lib\rapidxml-1.13;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;user32.lib;gdi32.lib;Xinput.lib;Shlwapi.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\code;$(ProjectDir)..\..\code\common;$(ProjectDir)..\..\code\common\collections;$(ProjectDir)..\..\code\common\math;$(ProjectDir)..\..\code\common\memory;$(ProjectDir)..\..\code\engine;$(ProjectDir)..\..\code\engine\entities;$(ProjectDir)..\..\code\engine\graphics;$(ProjectDir)..\..\code\game;$(ProjectDir)..\..\code\platform;$(ProjectDir)..\..\code\platform\win32;$(ProjectDir)..\..\lib\gl3w\include;$(ProjectDir)..\..\lib\rapidxml-1.13;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;user32.lib;gdi32.lib;Xinput.lib;Shlwapi.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\code;$(ProjectDir)..\..\code\common;$(ProjectDir)..\..\code\common\collections;$(ProjectDir)..\..\code\common\math;$(ProjectDir)..\..\code\common\memory;$(ProjectDir)..\..\code\engine;$(ProjectDir)..\..\code\engine\entities;$(ProjectDir)..\..\code\engine\graphics;$(ProjectDir)..\..\code\game;$(ProjectDir)..\..\code\platform;$(ProjectDir)..\..\code\platform\win32;$(ProjectDir)..\..\lib\gl3w\include;$(ProjectDir)..\..\lib\rapidxml-1.13;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;user32.lib;gdi32.lib;Xinput.lib;Shlwapi.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\code\common\collections\ruin_list.cpp" />
+    <ClCompile Include="..\..\code\common\collections\ruin_vector.cpp" />
+    <ClCompile Include="..\..\code\common\math\ruin_matrix.cpp" />
+    <ClCompile Include="..\..\code\common\memory\ruin_allocator.cpp" />
+    <ClCompile Include="..\..\code\common\memory\ruin_memory.cpp" />
+    <ClCompile Include="..\..\code\common\ruin_assert.cpp" />
+    <ClCompile Include="..\..\code\engine\entities\ruin_componentsystem.cpp" />
+    <ClCompile Include="..\..\code\engine\entities\ruin_entity.cpp" />
+    <ClCompile Include="..\..\code\engine\entities\ruin_rendersystem.cpp" />
+    <ClCompile Include="..\..\code\engine\graphics\ruin_camera.cpp" />
+    <ClCompile Include="..\..\code\engine\graphics\ruin_gl.cpp" />
+    <ClCompile Include="..\..\code\engine\graphics\ruin_render.cpp" />
+    <ClCompile Include="..\..\code\engine\graphics\ruin_texture.cpp" />
+    <ClCompile Include="..\..\code\engine\graphics\ruin_vk.cpp" />
+    <ClCompile Include="..\..\code\game\ruin_levelmap.cpp" />
+    <ClCompile Include="..\..\code\game\ruin_tileset.cpp" />
+    <ClCompile Include="..\..\code\platform\win32\win32_ruin_application.cpp" />
+    <ClCompile Include="..\..\code\platform\win32\win32_ruin_file.cpp" />
+    <ClCompile Include="..\..\code\platform\win32\win32_ruin_input.cpp" />
+    <ClCompile Include="..\..\code\platform\win32\win32_ruin_main.cpp" />
+    <ClCompile Include="..\..\lib\gl3w\src\gl3w.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\code\common\collections\ruin_hashtable.h" />
+    <ClInclude Include="..\..\code\common\collections\ruin_list.h" />
+    <ClInclude Include="..\..\code\common\collections\ruin_vector.h" />
+    <ClInclude Include="..\..\code\common\math\ruin_math.h" />
+    <ClInclude Include="..\..\code\common\math\ruin_math_basic.h" />
+    <ClInclude Include="..\..\code\common\math\ruin_matrix.h" />
+    <ClInclude Include="..\..\code\common\math\ruin_vec.h" />
+    <ClInclude Include="..\..\code\common\memory\ruin_allocator.h" />
+    <ClInclude Include="..\..\code\common\memory\ruin_memory.h" />
+    <ClInclude Include="..\..\code\common\ruin_assert.h" />
+    <ClInclude Include="..\..\code\common\ruin_int.h" />
+    <ClInclude Include="..\..\code\common\ruin_string.h" />
+    <ClInclude Include="..\..\code\engine\entities\ruin_animationcomponent.h" />
+    <ClInclude Include="..\..\code\engine\entities\ruin_componentsystem.h" />
+    <ClInclude Include="..\..\code\engine\entities\ruin_entity.h" />
+    <ClInclude Include="..\..\code\engine\entities\ruin_rendersystem.h" />
+    <ClInclude Include="..\..\code\engine\entities\ruin_spritecomponent.h" />
+    <ClInclude Include="..\..\code\engine\entities\ruin_transformcomponent.h" />
+    <ClInclude Include="..\..\code\engine\graphics\ruin_camera.h" />
+    <ClInclude Include="..\..\code\engine\graphics\ruin_gl.h" />
+    <ClInclude Include="..\..\code\engine\graphics\ruin_render.h" />
+    <ClInclude Include="..\..\code\engine\graphics\ruin_texture.h" />
+    <ClInclude Include="..\..\code\engine\graphics\ruin_vk.h" />
+    <ClInclude Include="..\..\code\game\ruin_game.h" />
+    <ClInclude Include="..\..\code\game\ruin_level.h" />
+    <ClInclude Include="..\..\code\game\ruin_levelmap.h" />
+    <ClInclude Include="..\..\code\game\ruin_tileset.h" />
+    <ClInclude Include="..\..\code\platform\ruin_application.h" />
+    <ClInclude Include="..\..\code\platform\ruin_file.h" />
+    <ClInclude Include="..\..\code\platform\ruin_input.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

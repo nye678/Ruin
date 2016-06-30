@@ -1,7 +1,7 @@
 #include "ruin_vk.h"
 #include "ruin_file.h"
 
-#include "vulkan.h"
+//#include "vulkan.h"
 #include <cstdio>
 
 using namespace Ruin;

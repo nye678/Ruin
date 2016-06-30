@@ -79,14 +79,14 @@ Renderer* CreateRenderer()
     glVertexAttribDivisor(1, 1);
 
     char *spriteShaderVertCode = nullptr, *spriteShaderFragCode = nullptr;
-    LoadTextFile("D:\\Projects\\Ruin\\data\\shaders\\sprite_shader.vert", spriteShaderVertCode);
-    LoadTextFile("D:\\Projects\\Ruin\\data\\shaders\\sprite_shader.frag", spriteShaderFragCode);
+    LoadTextFile("..\\data\\shaders\\sprite_shader.vert", spriteShaderVertCode);
+    LoadTextFile("..\\data\\shaders\\sprite_shader.frag", spriteShaderFragCode);
 
     r->shader = CompileBasicShader(spriteShaderVertCode, spriteShaderFragCode);
     Release(spriteShaderVertCode);
     Release(spriteShaderFragCode);
 
-    BitMap* bmp = LoadBMP("D:\\Projects\\Ruin\\data\\textures\\default.bmp");
+    BitMap* bmp = LoadBMP("..\\data\\textures\\default.bmp");
     DEBUG_TEXTURE = CreateTexture(bmp, Int2(1, 1), Int2(128, 128));
 
     glEnable(GL_BLEND);
