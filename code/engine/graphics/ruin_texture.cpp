@@ -110,15 +110,26 @@ Texture* CreateTexture(BitMap* bitmap, int2 tileDim, int2 tileSize)
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 
-    glTexStorage2D(GL_TEXTURE_2D, 1, GL_RGBA8, bitmap->width, bitmap->height);
-    glTexSubImage2D(
+	glTexImage2D(
+		GL_TEXTURE_2D,
+		0,
+		GL_RGBA8,
+		bitmap->width,
+		bitmap->height,
+		0,
+		GL_RGBA,
+		GL_UNSIGNED_BYTE,
+		bitmap->data);
+    //not supported in gl < 4 :( 
+	//glTexStorage2D(GL_TEXTURE_2D, 1, GL_RGBA8, bitmap->width, bitmap->height);
+    /*glTexSubImage2D(
         GL_TEXTURE_2D,
         0, 0, 0,
         bitmap->width,
         bitmap->height, 
         GL_RGBA, 
         GL_UNSIGNED_BYTE,
-        bitmap->data);
+        bitmap->data);*/
 
     glActiveTexture(GL_TEXTURE0 + t->unit);
     glBindTexture(GL_TEXTURE_2D, 0);
