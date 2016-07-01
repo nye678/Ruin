@@ -43,6 +43,14 @@ struct Renderer
     GLuint indexBuffer;
 
     GLuint shader;
+
+    GLint positionLoc;
+    GLint indexLoc;
+    GLint textureSizeLoc;
+    GLint tileDimLoc;
+    GLint tileSizeLoc;
+    GLint cameraLoc;
+    GLint spriteTexLoc;  
 };
 
 struct DrawCall
@@ -58,6 +66,22 @@ Renderer* CreateRenderer()
 {
     Renderer* r = (Renderer*)Alloc(sizeof(Renderer));
     rInitialize<RenderCommand>(r->commands.vec, INITIAL_LIST_SIZE);
+
+    char *spriteShaderVertCode = nullptr, *spriteShaderFragCode = nullptr;
+    LoadTextFile("..\\data\\shaders\\sprite_shader.vert", spriteShaderVertCode);
+    LoadTextFile("..\\data\\shaders\\sprite_shader.frag", spriteShaderFragCode);
+
+    r->shader = CompileBasicShader(spriteShaderVertCode, spriteShaderFragCode);
+    Release(spriteShaderVertCode);
+    Release(spriteShaderFragCode);
+
+    r->positionLoc = glGetUniformLocation(r->shader, "position");
+    r->indexLoc = glGetUniformLocation(r->shader, "index");
+    r->textureSizeLoc = glGetUniformLocation(r->shader, "textureSize");
+    r->tileDimLoc = glGetUniformLocation(r->shader, "tileDim");
+    r->tileSizeLoc = glGetUniformLocation(r->shader, "tileSize");
+    r->cameraLoc = glGetUniformLocation(r->shader, "camera");
+    r->spriteTexLoc = glGetUniformLocation(r->shader, "spriteTex");
 
     glGenVertexArrays(1, &(r->vertexArray));
     glBindVertexArray(r->vertexArray);
@@ -78,14 +102,6 @@ Renderer* CreateRenderer()
     glVertexAttribPointer(1, 1, GL_FLOAT, GL_FALSE, sizeof(GLfloat), 0);
     glVertexAttribDivisor(1, 1);
 
-    char *spriteShaderVertCode = nullptr, *spriteShaderFragCode = nullptr;
-    LoadTextFile("..\\data\\shaders\\sprite_shader.vert", spriteShaderVertCode);
-    LoadTextFile("..\\data\\shaders\\sprite_shader.frag", spriteShaderFragCode);
-
-    r->shader = CompileBasicShader(spriteShaderVertCode, spriteShaderFragCode);
-    Release(spriteShaderVertCode);
-    Release(spriteShaderFragCode);
-
     BitMap* bmp = LoadBMP("..\\data\\textures\\default.bmp");
     DEBUG_TEXTURE = CreateTexture(bmp, Int2(1, 1), Int2(128, 128));
 
@@ -98,23 +114,15 @@ Renderer* CreateRenderer()
     return r;
 }
 
-#define POSITION_LOC 0
-#define TEXTURE_LOC 7
-#define TEXTURE_SIZE_LOC 2
-#define TILE_DIM_LOC 3
-#define TILE_SIZE_LOC 4
-#define TILE_INDEX_LOC 5
-#define CAMERA_LOC 6
-
-void LoadTexture(Texture* tex)
+void LoadTexture(Renderer* r, Texture* tex)
 {
-    glUniform1i(TEXTURE_LOC, tex->unit);
+    glUniform1i(r->spriteTexLoc, tex->unit);
     glActiveTexture(GL_TEXTURE0 + tex->unit);
     glBindTexture(GL_TEXTURE_2D, tex->handle);
 
-    glUniform2i(TEXTURE_SIZE_LOC, tex->width, tex->height);
-    glUniform2i(TILE_DIM_LOC, tex->tileDim.x, tex->tileDim.y);
-    glUniform2i(TILE_SIZE_LOC, tex->tileSize.x, tex->tileSize.y);
+    glUniform2i(r->textureSizeLoc, tex->width, tex->height);
+    glUniform2i(r->tileDimLoc, tex->tileDim.x, tex->tileDim.y);
+    glUniform2i(r->tileSizeLoc, tex->tileSize.x, tex->tileSize.y);
 }
 
 void MapBuffers(Renderer* r, float3* &positions, GLfloat* &indices)
@@ -157,13 +165,13 @@ void Render(Renderer* r)
     //mat4 camera = orthoProjection(0, 1024, 0, 768, 0, 1);
     mat4 camera = orthoProjection(0, 256, 0, 192, 0.0001f, 10000.0f);
 
-    glUniformMatrix4fv(CAMERA_LOC, 1, GL_FALSE, camera.m);
+    glUniformMatrix4fv(r->cameraLoc, 1, GL_FALSE, camera.m);
     
     if (r->commands.vec.length > 0)
     {
         RenderCommand* cmd = rGet<RenderCommand>(r->commands.vec, 0);
         tex = cmd->texture;
-        LoadTexture(cmd->texture);
+        LoadTexture(r, cmd->texture);
         MapBuffers(r, positions, indices);
     }
 
@@ -184,7 +192,7 @@ void Render(Renderer* r)
             glDrawArraysInstanced(GL_TRIANGLE_FAN, 0, 4, i - p);
 
             tex = cmd->texture;
-            LoadTexture(tex);
+            LoadTexture(r, tex);
 			MapBuffers(r, positions, indices);
 
             p = i+1;

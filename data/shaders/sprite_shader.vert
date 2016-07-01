@@ -1,12 +1,11 @@
 #version 330 core
-#extension GL_ARB_explicit_uniform_location : require
 
-layout(location = 0) in vec3 position;
-layout(location = 1) in float index;
-layout(location = 2) uniform ivec2 textureSize;
-layout(location = 3) uniform ivec2 tileDim;
-layout(location = 4) uniform ivec2 tileSize;
-layout(location = 6) uniform mat4 camera;
+in vec3 position;
+in float index;
+uniform ivec2 textureSize;
+uniform ivec2 tileDim;
+uniform ivec2 tileSize;
+uniform mat4 camera;
 
 out vec2 uv;
 
