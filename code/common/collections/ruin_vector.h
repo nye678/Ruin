@@ -3,39 +3,6 @@
 
 #include "ruin_int.h"
 
-struct Vector
-{
-    size_t capacity;
-    size_t length;
-    size_t itemSize;
-    void* array;
-};
-
-void* get(Vector*, size_t index);
-void* front(Vector*);
-void* back(Vector*);
-void pushFront(Vector*, void*);
-void pushBack(Vector*, void*);
-void popFront(Vector*);
-void popBack(Vector*);
-void clear(Vector*);
-void resize(Vector*, size_t);
-size_t length(Vector*);
-bool isEmpty(Vector*);
-
-Vector* createVector(size_t capacity, size_t itemSize);
-Vector* clone(Vector*);
-
-void Release(Vector*);
-
-// If < 0 => LT, If == 0 EQ, If > 0 => GT
-typedef int32_t (*CompareFunc)(void*, void*);
-typedef void (*MapFunc)(void*);
-
-void Sort(Vector*, CompareFunc);
-void* Find(Vector*, void* key, CompareFunc);
-void Map(Vector*, MapFunc);
-
 namespace Ruin
 {
     template <typename T>

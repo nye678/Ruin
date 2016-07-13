@@ -118,7 +118,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\code\common\collections\ruin_list.cpp" />
-    <ClCompile Include="..\..\code\common\collections\ruin_vector.cpp" />
     <ClCompile Include="..\..\code\common\math\ruin_matrix.cpp" />
     <ClCompile Include="..\..\code\common\memory\ruin_allocator.cpp" />
     <ClCompile Include="..\..\code\common\memory\ruin_memory.cpp" />

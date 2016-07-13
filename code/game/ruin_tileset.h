@@ -16,7 +16,7 @@ struct TileDefinition
 struct TileSet
 {
     Texture* texture;
-    Vector* tileDefinitions;
+    //Ruin::rsVector* tileDefinitions;
 };
 
 TileSet* LoadTileSet(const char* filePath);

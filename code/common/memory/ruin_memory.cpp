@@ -6,6 +6,12 @@
 
 typedef uint32_t BoundaryTag;
 
+union rsBoundaryTag
+{
+	bool allocated : 1;
+	uint32_t blockLength;
+};
+
 #define BLOCK_LENGTH(tag_ptr) (*tag_ptr & ~0x01)
 #define BLOCK_FREE(tag_ptr) (*tag_ptr & 0x00)
 #define SET_BLOCK_FREE(tag_ptr) (*tag_ptr &= ~0x01)
@@ -39,6 +45,7 @@ Allocator* g_allocator = nullptr;
 
 void SetBoundaryTagsAlloc(uintptr_t ptr, size_t block_size)
 {
+	rsBoundaryTag *test = (rsBoundaryTag*)BLOCK_TAG(ptr);
     auto start_tag = BLOCK_TAG(ptr);
     auto end_tag = BLOCK_END_TAG(ptr, block_size);
     *start_tag = (BoundaryTag)block_size;

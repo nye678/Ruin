@@ -170,8 +170,8 @@ void Render(Renderer* r)
     if (r->commands.vec.length > 0)
     {
         RenderCommand* cmd = rGet<RenderCommand>(r->commands.vec, 0);
-        tex = cmd->texture;
-        LoadTexture(r, cmd->texture);
+        tex = cmd->drawTexture.texture;
+        LoadTexture(r, cmd->drawTexture.texture);
         MapBuffers(r, positions, indices);
     }
 
@@ -182,16 +182,16 @@ void Render(Renderer* r)
         RenderCommand* cmd = rGet<RenderCommand>(r->commands.vec, i);
 
         //glUniform3f(POSITION_LOC, cmd->position.x, cmd->position.y, (float)cmd->depth);
-        positions[i - p] = Float3(cmd->position.x, cmd->position.y, cmd->depth);
-        indices[i - p] = (GLfloat)cmd->index;
+        positions[i - p] = Float3(cmd->drawTexture.position.x, cmd->drawTexture.position.y, cmd->drawTexture.depth);
+        indices[i - p] = (GLfloat)cmd->drawTexture.index;
 
-        if (tex != cmd->texture)
+        if (tex != cmd->drawTexture.texture)
         {
             UnmapBuffers(r, positions, indices);
 
             glDrawArraysInstanced(GL_TRIANGLE_FAN, 0, 4, i - p);
 
-            tex = cmd->texture;
+            tex = cmd->drawTexture.texture;
             LoadTexture(r, tex);
 			MapBuffers(r, positions, indices);
 
@@ -207,17 +207,17 @@ void CreateKey(RenderCommand &cmd, reFullScreenLayer layer)
 {
     cmd.key.key = 0;
     cmd.key.key |= ((uint64_t)layer) << 62;
-	cmd.key.key |= ((uint64_t)((fmin(cmd.depth, 10000.0f) / 10000.0f) * 0x00FFFFFF)) << 30;
-    cmd.key.key |= ((uint64_t)(cmd.texture->unit));
+	cmd.key.key |= ((uint64_t)((fmin(cmd.drawTexture.depth, 10000.0f) / 10000.0f) * 0x00FFFFFF)) << 29;
+    cmd.key.key |= ((uint64_t)(cmd.drawTexture.texture->unit));
 }
 
 void Draw(Renderer* r, float2 position, float depth, uint32_t index, reFullScreenLayer layer)
 {
     RenderCommand cmd;
-    cmd.depth = depth;
-    cmd.texture = DEBUG_TEXTURE;
-    cmd.position = position;
-    cmd.index = index;
+    cmd.drawTexture.depth = depth;
+    cmd.drawTexture.texture = DEBUG_TEXTURE;
+    cmd.drawTexture.position = position;
+    cmd.drawTexture.index = index;
     CreateKey(cmd, layer);
 
     rPushBack<RenderCommand>(r->commands.vec, cmd);
@@ -229,10 +229,10 @@ void Draw(Renderer* r, Texture* texture, float2 position, float depth, uint32_t 
         return;
 
     RenderCommand cmd;
-    cmd.depth = depth;
-    cmd.texture = texture;
-    cmd.position = position;
-    cmd.index = index;
+    cmd.drawTexture.depth = depth;
+    cmd.drawTexture.texture = texture;
+    cmd.drawTexture.position = position;
+    cmd.drawTexture.index = index;
     CreateKey(cmd, layer);
 
     rPushBack<RenderCommand>(r->commands.vec, cmd);

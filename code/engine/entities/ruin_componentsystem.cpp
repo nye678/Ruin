@@ -15,9 +15,9 @@ using namespace Ruin;
 typedef rsVector<rsTransformComponent> rsTransformComponentVector;
 typedef rsVector<rsSpriteComponent> rsSpriteComponentVector;
 typedef rsVector<rsAnimationComponent> rsAnimationComponentVector;
-typedef rsHashTable<rsEntity, rsTransformComponent*, rEntityHashFunc, 3079> rsTransformComponentHashTable;
-typedef rsHashTable<rsEntity, rsSpriteComponent*, rEntityHashFunc, 3079> rsSpriteComponentHashTable;
-typedef rsHashTable<rsEntity, rsAnimationComponent*, rEntityHashFunc, 3079> rsAnimationComponentHashTable;
+typedef rsHashTable<rsEntity, uint32_t, rEntityHashFunc, 3079> rsTransformComponentHashTable;
+typedef rsHashTable<rsEntity, uint32_t, rEntityHashFunc, 3079> rsSpriteComponentHashTable;
+typedef rsHashTable<rsEntity, uint32_t, rEntityHashFunc, 3079> rsAnimationComponentHashTable;
 
 struct Ruin::rsComponentSystem
 {
@@ -35,9 +35,9 @@ rsComponentSystem* Ruin::rCreateComponentSystem(rsAllocator& allocator)
     rsComponentSystem* system = (rsComponentSystem*)rAlloc(allocator, sizeof(rsComponentSystem));
     system->allocator = allocator;
 
-    rInitialize(system->transforms, 100002);
-    rInitialize(system->sprites, 100002);
-    rInitialize(system->anims, 100002);
+    rInitialize(system->transforms);
+    rInitialize(system->sprites);
+    rInitialize(system->anims);
 
     system->transformLookup = (rsTransformComponentHashTable*)rAlloc(allocator, sizeof(rsTransformComponentHashTable));
     *(system->transformLookup) = rsTransformComponentHashTable(allocator);
@@ -60,7 +60,7 @@ void* Ruin::rCreateComponent(rsComponentSystem* system, rsEntity entity, reCompo
             
             rPushBack(system->transforms, transform);
             rsTransformComponent* newComp = rBack(system->transforms);
-            system->transformLookup->insert(entity, newComp);
+            system->transformLookup->insert(entity, system->transforms.length - 1);
             return newComp;
         }
         break;
@@ -71,7 +71,7 @@ void* Ruin::rCreateComponent(rsComponentSystem* system, rsEntity entity, reCompo
 
             rPushBack(system->sprites, sprite);
             rsSpriteComponent* newComp = rBack(system->sprites);
-            system->spritesLookup->insert(entity, newComp);
+            system->spritesLookup->insert(entity, system->sprites.length - 1);
             return newComp;
         }
         break;
@@ -82,7 +82,7 @@ void* Ruin::rCreateComponent(rsComponentSystem* system, rsEntity entity, reCompo
 
             rPushBack(system->anims, anims);
             rsAnimationComponent* newComp = rBack(system->anims);
-            system->animsLookup->insert(entity, newComp);
+            system->animsLookup->insert(entity, system->anims.length - 1);
             return newComp;
         }
         break;
@@ -102,26 +102,46 @@ int32_t rComponentSortFunc(void* c1, void* c2)
 void Ruin::rUpdateComponentSystem(rsComponentSystem* components, double dt)
 {
     // Render System Update     
-    for (int spriteIndex = 0; spriteIndex < components->sprites.length; ++spriteIndex)
+    /*for (int spriteIndex = 0; spriteIndex < components->sprites.length; ++spriteIndex)
     {
         rsSpriteComponent* sprite = rGet(components->sprites, spriteIndex);
-        rsAnimationComponent* anims = nullptr;
-        if (sprite && components->animsLookup->lookup(sprite->entity, anims))
+		uint32_t animsIndex = 0;
+        if (sprite && components->animsLookup->lookup(sprite->entity, animsIndex))
         {
+			rsAnimationComponent* anims = rGet(components->anims, animsIndex);
             rRenderSystemComponentUpdate(sprite, anims, dt);
         }
-    }
+    }*/
+
+	rsSpriteComponent* sprites = components->sprites.array;
+	rsAnimationComponent* anims = components->anims.array;
+
+	size_t spriteIndex = 0;
+	size_t animIndex = 0;
+
+	for (; spriteIndex < components->sprites.length 
+		&& animIndex < components->anims.length;
+		++spriteIndex)
+	{
+		rsSpriteComponent* sprite = sprites + spriteIndex;
+		rsAnimationComponent* anim = anims + animIndex;
+		if (sprite->entity == anim->entity)
+		{
+			rRenderSystemComponentUpdate(sprite, anim, dt);
+			++animIndex;
+		}
+	}
 }
 
 void Ruin::rRenderComponentSystem(rsComponentSystem* components, Renderer* renderer)
 {
-    /*rsSpriteComponent* sprites = (rsSpriteComponent*)components->sprites->array;
-    rsTransformComponent* transforms = (rsTransformComponent*)components->transforms->array;
+    rsSpriteComponent* sprites = components->sprites.array;
+    rsTransformComponent* transforms = components->transforms.array;
 
     int spriteIndex = 0; 
     int transformIndex = 0;
-    for (; spriteIndex < components->sprites->length
-        && transformIndex < components->transforms->length;
+    for (; spriteIndex < components->sprites.length
+        && transformIndex < components->transforms.length;
         ++spriteIndex)
     {
         rsSpriteComponent* sprite = sprites + spriteIndex;
@@ -131,19 +151,20 @@ void Ruin::rRenderComponentSystem(rsComponentSystem* components, Renderer* rende
             rRenderSystemRenderSprite(renderer, sprite, transform);
             ++transformIndex;
         }
-    }*/
+    }
 
-    rsSpriteComponent* sprites = components->sprites.array;
+    /*rsSpriteComponent* sprites = components->sprites.array;
     rsTransformComponent* transforms = components->transforms.array;
 
     int spriteIndex = 0; 
     for (; spriteIndex < components->sprites.length; ++spriteIndex)
     {
         rsSpriteComponent* sprite = sprites + spriteIndex;
-        rsTransformComponent* transform = nullptr;
-        if (sprite != nullptr && components->transformLookup->lookup(sprite->entity, transform))
+		uint32_t transformIndex = 0;
+        if (sprite != nullptr && components->transformLookup->lookup(sprite->entity, transformIndex))
         {
+			rsTransformComponent* transform = rGet(components->transforms, transformIndex);
             rRenderSystemRenderSprite(renderer, sprite, transform);
         }
-    }
+    }*/
 }
